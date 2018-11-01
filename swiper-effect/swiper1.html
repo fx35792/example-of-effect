@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>swiper-demo 中间大两边小</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../node_modules/swiper/dist/idangerous.swiper.css">
+    <style>
+        .bao-slider {
+            padding: 90px 0 0;
+            height: 600px;
+        }
+        
+        .bao-slider .swiper-slide {
+            text-align: center
+        }
+        
+        .bao-slider .swiper-slide-active img {
+            transform: scale(1)
+        }
+        
+        .bao-slider img {
+            transition: all ease .3s 0s;
+            -moz-transition: all ease .3s 0s;
+            -webkit-transition: all ease .3s 0s;
+            transform: scale(0.7);
+            width: 100%;
+            box-shadow: 0 0 40px #ccc
+        }
+        
+        .bao-slider .swiper-slide-next {
+            -webkit-transform: scale(1.2, 1.2);
+            overflow: visible
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="bao-slider swiper-container swiper-container-horizontal">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <img src="../images/blank.gif" data-src="../images/swiper/bao-slide1.jpg" alt="" class="lazyload">
+                </li>
+                <li class="swiper-slide">
+                    <img src="../images/blank.gif" data-src="../images/swiper/bao-slide2.jpg" alt="" class="lazyload">
+                </li>
+                <li class="swiper-slide">
+                    <img src="../images/blank.gif" data-src="../images/swiper/bao-slide3.jpg" alt="" class="lazyload">
+                </li>
+                <li class="swiper-slide">
+                    <img src="../images/blank.gif" data-src="../images/swiper/bao-slide4.jpg" alt="" class="lazyload">
+                </li>
+                <li class="swiper-slide">
+                    <img src="../images/blank.gif" data-src="../images/swiper/bao-slide5.jpg" alt="" class="lazyload">
+                </li>
+                <li class="swiper-slide">
+                    <img src="../images/blank.gif" data-src="../images/swiper/bao-slide6.jpg" alt="" class="lazyload">
+                </li>
+                <li class="swiper-slide">
+                    <img src="../images/blank.gif" data-src="../images/swiper/bao-slide7.jpg" alt="" class="lazyload">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/swiper/dist/idangerous.swiper.min.js"></script>
+    <script src="../node_modules/lazyload/lazyload.min.js"></script>
+    <script>
+        // $(function() {
+        var mySwiper = new Swiper('.swiper-container', {
+            // pagination: '.pagination',
+            paginationClickable: true,
+            centeredSlides: true,
+            loop: true,
+            height: "660px",
+            slidesPerView: 3,
+            watchActiveIndex: true,
+            autoplay: 5000,
+            onSlideChangeEnd: function() {
+                $(window).scroll();
+            }
+        });
+        $("img.lazyload").lazyload();
+        // })
+    </script>
+
+</body>
+
+</html>
