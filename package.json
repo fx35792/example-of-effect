@@ -4,7 +4,7 @@
   "description": "![](https://github.com/fx35792/example-of-effect/blob/master/img-hover-effect/images/final_img.png)",
   "main": "index.js",
   "scripts": {
-    "start": "echo \"Error: no test specified\" && exit 1"
+    "start": "echo \"Error: no test spcified\" && exit 1"
   },
   "repository": {
     "type": "git",
